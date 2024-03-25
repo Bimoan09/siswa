@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+
+    <record id="action_menu_siswa" model="ir.actions.act_window">
+        <field name="name">Siswa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">siswa</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_id" eval="False"/>
+        <field name="help" type="html">
+        	<p class="o_view_nocontent_smiling_face">
+        		Buat data siswa baru
+        	</p>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="tree_view_siswa">
+        <field name="name">tree.view.siswa</field>
+        <field name="model">siswa</field>
+        <field name="arch" type="xml">
+            <tree string="Siswa">
+                <field name="name"/>
+                <field name="date_of_birth"/>
+                <field name="kelas"/>
+                <field name="guru"/>
+                <field name="mata_pelajaran"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_view_siswa" model="ir.ui.view">
+        <field name="name">form.view.siswa</field>
+        <field name="model">siswa</field>
+        <field name="arch" type="xml">
+            <form string="Siswa">
+	            <sheet>
+	                <group>
+	                    <group>
+	                         <field name="name"/>
+                             <field name="date_of_birth"/>
+                             <field name="kelas"/>
+	                    </group>
+                        <group>
+	                         <field name="guru"/>
+                             <field name="mata_pelajaran"/>
+
+                        </group>
+	                </group>
+	            </sheet>
+	            <div class="oe_chatter">
+	            	<field name="message_follower_ids" widget="mail_followers"/>
+	            	<field name="message_ids" widget="mail_thread"/>
+	            </div>
+            </form>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_siswa"
+          name="Siswa"
+          action="action_menu_siswa"
+          sequence="1"/>
+  </data>
+</odoo>

@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <record id="action_menu_kelas" model="ir.actions.act_window">
+        <field name="name">Kelas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kelas</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_id" eval="False"/>
+        <field name="help" type="html">
+        	<p class="o_view_nocontent_smiling_face">
+        		Buat data kelas baru
+        	</p>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="tree_view_kelas">
+        <field name="name">tree.view.kelas</field>
+        <field name="model">kelas</field>
+        <field name="arch" type="xml">
+            <tree string="Kelas">
+               <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_view_kelas" model="ir.ui.view">
+        <field name="name">form.view.kelas</field>
+        <field name="model">kelas</field>
+        <field name="arch" type="xml">
+            <form string="Kelas">
+	            <sheet>
+	                <group>
+	                    <group>
+	                        <field name="name"/>
+	                    </group>
+	                </group>
+	            </sheet>
+	            <div class="oe_chatter">
+	            	<field name="message_follower_ids" widget="mail_followers"/>
+	            	<field name="message_ids" widget="mail_thread"/>
+	            </div>
+            </form>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_kelas"
+          name="Kelas"
+          parent="siswa.menu_siswa"
+          action="action_menu_kelas"
+          sequence="4"/>
+
+  </data>
+</odoo>

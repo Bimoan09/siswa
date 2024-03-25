@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+      <record id="action_siswa_report" model="ir.actions.report">
+           <field name="name">Siswa</field>
+           <field name="model">siswa</field>
+           <field name="report_type">qweb-pdf</field>
+           <field name="report_name">siswa.report_siswa_template</field>
+           <field name="report_file">siswa.report_siswa_template</field>
+           <field name="print_report_name">'Siswa - %s' % (object.name)</field>
+           <field name="binding_model_id" ref="model_siswa"/>
+     </record>
+</odoo>
