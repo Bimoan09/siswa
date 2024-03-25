@@ -1,4 +1,4 @@
-i am assuming you have installed ubuntu, python and odoo 14 in your environment
+i am assuming you have installed ubuntu (or any OS you prefer), python 3 and odoo version 14 in your environment, next:
 
 1. clone this repository
 2. move folder siswa to **odoo custom addons** in your environment
