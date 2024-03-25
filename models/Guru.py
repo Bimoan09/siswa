@@ -8,8 +8,8 @@ class Guru(models.Model):
     _description = 'Model guru'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char('Nama guru')
-    mapel = fields.Many2one('mata.pelajaran', 'Mata pelajaran')
+    name = fields.Char('Nama guru', required=True)
+    mapel = fields.Many2one('mata.pelajaran', 'Mata pelajaran', required=True)
 
 
 

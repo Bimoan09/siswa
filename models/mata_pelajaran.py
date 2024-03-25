@@ -10,7 +10,7 @@ class MataPelajaran(models.Model):
 
 
 
-    name = fields.Char('Mata pelajaran')
+    name = fields.Char('Mata pelajaran', required=True)
 
 
 

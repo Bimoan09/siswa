@@ -5,7 +5,7 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>Siswa</h2>
-                        <table class="table table-condensed">
+                        <table class="table table-bordered table-condensed">
                             <thead>
                                 <tr>
                                     <th>Nama</th>

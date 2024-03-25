@@ -8,7 +8,7 @@ class Kelas(models.Model):
     _description = 'Model kelas'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char('Nama kelas')
+    name = fields.Char('Nama kelas', required=True)
 
 
 
